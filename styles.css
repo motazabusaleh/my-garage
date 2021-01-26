@@ -1,0 +1,46 @@
+body h1 { 
+    background-color: grey;
+    color: white;
+    text-align: center;
+
+}
+
+body form fieldset {
+    margin-right: 80%;
+    position: relative;
+    top: 70%;
+    background-color: grey;
+    padding-right: 0%;
+    
+    
+}
+legend{
+    color: black;
+   position: relative;
+   top: 7px;
+}
+
+body table{
+    position: relative;
+    left: 40%;
+    top: 0%;
+    background-color: grey;
+    
+    
+    
+}
+
+table tr th {
+    border: solid;
+    display: list-item;
+    
+}
+
+table tr td {
+    background-color: white;
+    color: black;
+
+}
+body{
+    background-image: url("background.jpg");
+}
