@@ -29,16 +29,20 @@ body table{
     
     
 }
-
+table{
+    width: 50%;
+}
 table tr th {
     border: solid;
-    display: list-item;
+    /* display: list-item; */
     
 }
 
 table tr td {
     background-color: white;
     color: black;
+    width: 300px; float: left; border: 1px solid black;
+    
 
 }
 body{
