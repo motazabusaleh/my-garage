@@ -31,10 +31,11 @@ body table{
 }
 table{
     width: 50%;
+    
 }
 table tr th {
     border: solid;
-    /* display: list-item; */
+    
     
 }
 

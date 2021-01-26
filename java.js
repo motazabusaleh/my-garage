@@ -11,6 +11,15 @@ function Car() {
     Car.prototype.allCars.push(this);
 
 }
+if (localStorage.getItem('carObjects')) {
+
+    lsArray = JSON.parse(localStorage.getItem('carObjects'));
+    for (var i = 0; i < lsArray.length; i++) {
+
+        new Car(lsArray.carName, lsArray.cateModel, lsArray.carYear);
+
+    }
+}
 
 Car.prototype.render = function () {
     var dataRow = document.createElement('tr');
@@ -31,26 +40,15 @@ Car.prototype.render = function () {
 }
 
 
+var form1 = document.getElementById('form1');
 
-
-if (localStorage.getItem('carObjects')) {
-
-    lsArray = JSON.parse(localStorage.getItem('carObjects'));
-    for (var i = 0; i < lsArray.length; i++) {
-
-        new Car(lsArray.carName, lsArray.cateModel, lsArray.carYear);
-
-    }
-}
-
-var form = document.getElementById('form1');
-
-form.addEventListener('submit', addCar);
+form1.addEventListener('submit', addCar);
 
 
 function addCar(event) {
+
     event.preventDefault();
-    
+
     var carNameValue = event.target.carName.value;
     var cateModelValue = event.target.cateModel.value;
     var carYearValue = event.target.carYear.value;
@@ -61,5 +59,9 @@ function addCar(event) {
 
     localStorage.setItem('carObjects', JSON.stringify(Car.prototype.allCars));
 }
+
+
+
+
 
 
