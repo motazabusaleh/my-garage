@@ -40,9 +40,9 @@ Car.prototype.render = function () {
 }
 
 
-var form1 = document.getElementById('form1');
+var form = document.getElementById('form');
 
-form1.addEventListener('submit', addCar);
+form.addEventListener('submit', addCar);
 
 
 function addCar(event) {
